@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 150vh; /* Ensure the body fills the viewport height */
+  background: linear-gradient(180deg, #FFFFFF 11%, #B1CBFF 100%);
+}
+
+
+
+.navbar {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 111.04px;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: center; /* Centers items vertically */
+  gap: 20px; /* Adds space between items */
+  padding: 10px; /* Optional padding around the container */
+  margin: 0px 100px 50px 0px; /* Adjusts margin for alignment */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline by default */
+  color: black; /* Set text color to black */
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 15.49px;
+  line-height: 27.22px;
+  letter-spacing: -0.2px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline solid blue; /* Underline on hover with blue color */
+  text-underline-offset: 2px; /* Slightly offset the underline */
+  text-decoration-skip-ink: none; /* Ensures proper underline style */
+  color: blue; /* Change text color to blue on hover */
+}
+
+
+.search-bar {
+  margin-top: 2rem;
+  width: 400px;
+  margin-left: 40px;
+  font-size: 16px;
+  border-radius: 12px; /* Rounded corners */
+}
+
+.search-icon-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 5px 10px;
+  width: 350px; /* Set the width of the search bar */
+  background-color: #fff;
+}
+
+.search-icon {
+  width: 16px; /* Adjust icon size */
+  height: 16px;
+  margin-right: 8px; /* Spacing between icon and input */
+}
+
+input {
+  width: 350px;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  border-radius: 12px;
+  outline: none; /* Prevents focus outline */
+}
+
+input:focus {
+  outline: none; /* Ensures no border or outline appears when focused */
+}
+
+.home {
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers children vertically */
+  align-items: center; /* Centers children horizontally */
+  height: 40vh; /* Makes the div fill the full viewport height */
+  text-align: center; /* Centers text content (if any) */
+}
+
+
+
+.search-results {
+  padding: 20px;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
+  gap: 5px; /* Very small space between grid items */
+  justify-items: center; /* Centers the items horizontally */
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .results {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+    gap: 4px; /* Very small gap for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .results {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+    gap: 3px; /* Very small gap for smaller screens */
+  }
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Ensures it takes up the full viewport height */
+}
+
+.not-found img {
+  width: 80%; /* Adjust this value to reduce width */
+  height: auto; /* Keeps the aspect ratio of the image */
+  max-width: 400px; /* Optional: Sets a max width to avoid the image becoming too large */
+}
